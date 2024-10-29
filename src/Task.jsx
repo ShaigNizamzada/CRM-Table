@@ -58,7 +58,6 @@ const Task = () => {
     phoneNumber: "",
   });
   const [edit, setEdit] = useState(null);
-  const [closeModal, setModal] = useState("modal");
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.companyName) {
@@ -329,7 +328,7 @@ const Task = () => {
                   <button
                     type="button"
                     className="btn btn-primary"
-                    data-bs-dismiss={`${!formData ? closeModal : ""}`}
+                    data-bs-dismiss="modal"
                     onClick={handleSubmit}
                   >
                     Yadda Saxla
